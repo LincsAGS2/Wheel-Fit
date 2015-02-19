@@ -226,7 +226,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239028879}
   m_LocalRotation: {x: .233810142, y: 0, z: 0, w: .97228235}
-  m_LocalPosition: {x: 5, y: 5.30000019, z: 0}
+  m_LocalPosition: {x: 4.5, y: 5.30000019, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -273,6 +273,10 @@ Prefab:
     - target: {fileID: 11410312, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}
       propertyPath: xMod
       value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410312, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}
+      propertyPath: forwardbackMoveLimit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}
@@ -421,7 +425,7 @@ MonoBehaviour:
   rotateLimit: 45
   moveSpeed: 5
   leftrightMoveLimit: 3
-  forwardbackMoveLimit: 3
+  forwardbackMoveLimit: 0
   xMod: 4.5
   gm: {fileID: 0}
 --- !u!23 &932161591
@@ -672,7 +676,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1328973312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 2, z: 3}
+  m_LocalPosition: {x: 4.5, y: 2, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 932161594}
