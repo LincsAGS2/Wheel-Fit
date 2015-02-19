@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Controller : MonoBehaviour {
 
-	public float rotateSpeed, rotateLimit, moveSpeed, leftrightMoveLimit, forwardbackMoveLimit;
+	public float rotateSpeed, rotateLimit, moveSpeed, leftrightMoveLimit, forwardbackMoveLimit, xMod;
+	public GameManager gm;
 
 	// Use this for initialization
 	void Start () {
+
 	}
 	
 	// Update is called once per frame
@@ -34,7 +36,7 @@ public class Controller : MonoBehaviour {
 
 	protected void MoveRight()
 	{
-		if (transform.position.x < leftrightMoveLimit) 
+		if (transform.position.x < leftrightMoveLimit + xMod) 
 		{
 			Vector3 tempPos = transform.position + new Vector3 (moveSpeed * 0.01f, 0, 0);
 			transform.position = tempPos;
@@ -43,7 +45,7 @@ public class Controller : MonoBehaviour {
 
 	protected void MoveLeft()
 	{
-		if (transform.position.x > -leftrightMoveLimit) 
+		if (transform.position.x > -leftrightMoveLimit + xMod) 
 		{
 			Vector3 tempPos = transform.position + new Vector3 (-moveSpeed * 0.01f, 0, 0);
 			transform.position = tempPos;
@@ -65,6 +67,19 @@ public class Controller : MonoBehaviour {
 		{
 			Vector3 tempPos = transform.position + new Vector3 (0, 0, -moveSpeed * 0.01f);
 			transform.position = tempPos;
+		}
+	}
+
+	void OnTriggerExit(Collider c)
+	{
+		try
+		{
+			Debug.Log("Hit Obstacle");
+			gm.AdjustMoveSpeed (-0.1f);
+		}
+		catch
+		{
+
 		}
 	}
 
