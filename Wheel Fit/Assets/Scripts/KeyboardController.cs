@@ -5,7 +5,7 @@ public class KeyboardController : Controller {
 
 	// Use this for initialization
 	void Start () {
-	
+		gm = FindObjectOfType<GameManager> ().GetComponent<GameManager> ();
 	}
 	
 	// Update is called once per frame
