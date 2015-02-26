@@ -98,6 +98,8 @@ public class KinectInput : Controller {
         if (seatedInfo == null) { return; };
         if (seatedInfo.Features == null) { return; };
 
+		Debug.Log (seatedInfo.Features.Angle);
+
         if (seatedInfo.Features.Angle > 5)
         {
             MoveRight();
@@ -108,31 +110,5 @@ public class KinectInput : Controller {
             MoveLeft();
             RotateLeft();
         }
-
-		// Set the soldier position
-        /*if (seatedInfo.SoldierInfo.IsSkeletonAvailable) 
-        {
-            if (inputInfo.SoldierInfo.Position > 0) 
-            {
-                MoveRight();
-                RotateRight();
-            }
-            else if (inputInfo.SoldierInfo.Position < 0)
-            {
-                MoveLeft();
-                RotateLeft();
-            }
-            Debug.Log (inputInfo.SoldierInfo.Position);
-                        //this.transform.position = Vector3.right * 3f * inputInfo.SoldierInfo.Position;
-        }
-        else
-        {
-            this.transform.position = Vector3.zero;
-        }
-		
-        if(inputInfo.SoldierInfo.IsSkeletonAvailable)
-            Debug.Log("Skeleton available.");*/
-
-
     }
 }	

@@ -1,0 +1,182 @@
+fileFormatVersion: 2
+guid: 43fa208b96cd56042bf27dc7978108eb
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: back_right bar_copy15_default
+    100002: back_right bar_copy16_default
+    100004: back_right bar_copy17_default
+    100006: back_right bar_copy18_default
+    100008: back_right bar_copy19_default
+    100010: back_right bar_copy20_default
+    100012: back_right bar_copy21_default
+    100014: back_right bar_copy22_default
+    100016: back_right bar_copy23_default
+    100018: back_right bar_copy24_default
+    100020: back_right bar_copy25_default
+    100022: back_right bar_default
+    100024: centre_left small wheel_default
+    100026: centre_of wheels_default2
+    100028: centre_right small wheel_default
+    100030: horizontal_seat_default
+    100032: Left_big wheel_default2
+    100034: Left_Ski_default
+    100036: Left_small wheel_default2
+    100038: right_big wheel_default2
+    100040: Right_Ski_default
+    100042: Right_Ski_extract10_default
+    100044: right_small wheel_default2
+    100046: vertical_seat_default
+    100048: //RootNode
+    400000: back_right bar_copy15_default
+    400002: back_right bar_copy16_default
+    400004: back_right bar_copy17_default
+    400006: back_right bar_copy18_default
+    400008: back_right bar_copy19_default
+    400010: back_right bar_copy20_default
+    400012: back_right bar_copy21_default
+    400014: back_right bar_copy22_default
+    400016: back_right bar_copy23_default
+    400018: back_right bar_copy24_default
+    400020: back_right bar_copy25_default
+    400022: back_right bar_default
+    400024: centre_left small wheel_default
+    400026: centre_of wheels_default2
+    400028: centre_right small wheel_default
+    400030: horizontal_seat_default
+    400032: Left_big wheel_default2
+    400034: Left_Ski_default
+    400036: Left_small wheel_default2
+    400038: right_big wheel_default2
+    400040: Right_Ski_default
+    400042: Right_Ski_extract10_default
+    400044: right_small wheel_default2
+    400046: vertical_seat_default
+    400048: //RootNode
+    2300000: back_right bar_copy15_default
+    2300002: back_right bar_copy16_default
+    2300004: back_right bar_copy17_default
+    2300006: back_right bar_copy18_default
+    2300008: back_right bar_copy19_default
+    2300010: back_right bar_copy20_default
+    2300012: back_right bar_copy21_default
+    2300014: back_right bar_copy22_default
+    2300016: back_right bar_copy23_default
+    2300018: back_right bar_copy24_default
+    2300020: back_right bar_copy25_default
+    2300022: back_right bar_default
+    2300024: centre_left small wheel_default
+    2300026: centre_of wheels_default2
+    2300028: centre_right small wheel_default
+    2300030: horizontal_seat_default
+    2300032: Left_big wheel_default2
+    2300034: Left_Ski_default
+    2300036: Left_small wheel_default2
+    2300038: right_big wheel_default2
+    2300040: Right_Ski_default
+    2300042: Right_Ski_extract10_default
+    2300044: right_small wheel_default2
+    2300046: vertical_seat_default
+    3300000: back_right bar_copy15_default
+    3300002: back_right bar_copy16_default
+    3300004: back_right bar_copy17_default
+    3300006: back_right bar_copy18_default
+    3300008: back_right bar_copy19_default
+    3300010: back_right bar_copy20_default
+    3300012: back_right bar_copy21_default
+    3300014: back_right bar_copy22_default
+    3300016: back_right bar_copy23_default
+    3300018: back_right bar_copy24_default
+    3300020: back_right bar_copy25_default
+    3300022: back_right bar_default
+    3300024: centre_left small wheel_default
+    3300026: centre_of wheels_default2
+    3300028: centre_right small wheel_default
+    3300030: horizontal_seat_default
+    3300032: Left_big wheel_default2
+    3300034: Left_Ski_default
+    3300036: Left_small wheel_default2
+    3300038: right_big wheel_default2
+    3300040: Right_Ski_default
+    3300042: Right_Ski_extract10_default
+    3300044: right_small wheel_default2
+    3300046: vertical_seat_default
+    4300000: back_right bar_copy15_default
+    4300002: back_right bar_copy16_default
+    4300004: back_right bar_copy17_default
+    4300006: back_right bar_copy18_default
+    4300008: back_right bar_copy19_default
+    4300010: back_right bar_copy20_default
+    4300012: back_right bar_copy21_default
+    4300014: back_right bar_copy22_default
+    4300016: back_right bar_copy23_default
+    4300018: back_right bar_copy24_default
+    4300020: back_right bar_copy25_default
+    4300022: back_right bar_default
+    4300024: centre_left small wheel_default
+    4300026: centre_of wheels_default2
+    4300028: centre_right small wheel_default
+    4300030: horizontal_seat_default
+    4300032: Left_big wheel_default2
+    4300034: Left_Ski_default
+    4300036: Left_small wheel_default2
+    4300038: right_big wheel_default2
+    4300040: Right_Ski_default
+    4300042: Right_Ski_extract10_default
+    4300044: right_small wheel_default2
+    4300046: vertical_seat_default
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

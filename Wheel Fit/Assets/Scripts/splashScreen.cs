@@ -3,7 +3,15 @@ using System.Collections;
 
 public class splashScreen : MonoBehaviour
 {
-	static splashScreen instance;
+
+	void Update()
+	{
+		if(Input.GetKeyDown(KeyCode.Return))
+		{
+			Application.LoadLevel("Menu");
+		}
+	}
+	/*static splashScreen instance;
 	GameObject splashScreenImage;
 
 	void Awake()
@@ -49,6 +57,6 @@ public class splashScreen : MonoBehaviour
 		}
 		return true;
 		
-	}
+	}*/
 	
 }

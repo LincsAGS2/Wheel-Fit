@@ -24,7 +24,7 @@ Transform:
   m_GameObject: {fileID: 124198}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .00999999978, y: .00999999978, z: .00999999978}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -41,9 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preCube: {fileID: 126836, guid: 660e22d69121c5f4a9447338b5629045, type: 2}
   obstacles: []
-  obstacle1: {fileID: 119772, guid: ad9ef9cdd2854834693ca9476d439333, type: 2}
-  obstacle2: {fileID: 166638, guid: a3e8f86921a26d148b820f226c852634, type: 2}
-  obstacle3: {fileID: 175848, guid: f83c061259f708642be2340596cb676f, type: 2}
+  obstacle1: {fileID: 100000, guid: 82e81ea117c3e4140853088c00d28644, type: 3}
+  obstacle2: {fileID: 100000, guid: 567c828c14d135d4b9cd6267c4f4b1ee, type: 3}
+  obstacle3: {fileID: 100004, guid: 1b65187464fd5b04c8dcbb375c2ccc76, type: 3}
   obstacle4: {fileID: 188484, guid: 0a5614dacaf3bd94cae1dd24ab12e552, type: 2}
 --- !u!1001 &100100000
 Prefab:

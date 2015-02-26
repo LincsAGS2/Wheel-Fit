@@ -75,12 +75,37 @@ public class Controller : MonoBehaviour {
 		try
 		{
 			Debug.Log("Hit Obstacle");
-			gm.AdjustMoveSpeed (-0.1f);
+			gm.AdjustMoveSpeed (-0.5f);
 		}
 		catch
 		{
 
 		}
+	}
+
+	void MenuRight()
+	{
+
+	}
+
+	void MenuLeft()
+	{
+
+	}
+
+	void MenuSelect()
+	{
+
+	}
+
+	void MenuUp()
+	{
+
+	}
+
+	void MenuDown()
+	{
+
 	}
 
 	/*protected void ResetAngle()
