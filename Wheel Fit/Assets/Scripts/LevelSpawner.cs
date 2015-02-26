@@ -22,6 +22,9 @@ public class LevelSpawner : MonoBehaviour {
 
 
 	// Use this for initialization
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start () {
 
 		startTime = DateTime.Now;
@@ -43,7 +46,9 @@ public class LevelSpawner : MonoBehaviour {
 
 
 
-	// Update is called once per frame
+	/// <summary>
+	/// Fixeds the update.
+	/// </summary>
 	void FixedUpdate () {
 		if(running)
 		{
@@ -68,6 +73,9 @@ public class LevelSpawner : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Moves the chunks.
+	/// </summary>
 	void MoveChunks()
 	{
 
@@ -86,6 +94,9 @@ public class LevelSpawner : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Ends the game.
+	/// </summary>
 	void endGame()
 	{
 		DateTime endTime = DateTime.Now;

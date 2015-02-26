@@ -16,6 +16,9 @@ public class Controller : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Rotates the character right.
+	/// </summary>
 	protected void RotateRight()
 	{
 		//Rotates the object right until it hits the rotate limit
@@ -25,6 +28,9 @@ public class Controller : MonoBehaviour {
 			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, rotateLimit, transform.eulerAngles.z);
 	}
 
+	/// <summary>
+	/// Rotates the character left.
+	/// </summary>
 	protected void RotateLeft()
 	{
 		//Rotates the object left until it hits the rotate limit
@@ -34,6 +40,9 @@ public class Controller : MonoBehaviour {
 			transform.eulerAngles = new Vector3 (transform.eulerAngles.x, -rotateLimit, transform.eulerAngles.z);
 	}
 
+	/// <summary>
+	/// Moves the character right.
+	/// </summary>
 	protected void MoveRight()
 	{
 		if (transform.position.x < leftrightMoveLimit + xMod) 
@@ -43,6 +52,9 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Moves the character left.
+	/// </summary>
 	protected void MoveLeft()
 	{
 		if (transform.position.x > -leftrightMoveLimit + xMod) 
@@ -52,6 +64,9 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Moves the character forward.
+	/// </summary>
 	protected void MoveForward()
 	{
 		if (transform.position.z < forwardbackMoveLimit + zMod) 
@@ -61,6 +76,9 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Moves the character back.
+	/// </summary>
 	protected void MoveBack()
 	{
 		if (transform.position.z > -forwardbackMoveLimit + zMod) 
@@ -70,6 +88,10 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Raises the trigger exit event.
+	/// </summary>
+	/// <param name="c">C.</param>
 	void OnTriggerExit(Collider c)
 	{
 		try
@@ -83,26 +105,41 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Moves menu selection right.
+	/// </summary>
 	void MenuRight()
 	{
 
 	}
 
+	/// <summary>
+	/// Moves menu selection left.
+	/// </summary>
 	void MenuLeft()
 	{
 
 	}
 
+	 /// <summary>
+	 /// Selects currently selected menu item.
+	 /// </summary>
 	void MenuSelect()
 	{
 
 	}
 
+	/// <summary>
+	/// Moves menu selection up.
+	/// </summary>
 	void MenuUp()
 	{
 
 	}
 
+	/// <summary>
+	/// Moves menu selection down.
+	/// </summary>
 	void MenuDown()
 	{
 

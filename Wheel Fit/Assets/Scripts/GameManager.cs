@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour {
 
 	public float moveSpeed;
 	// Use this for initialization
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start () {
         scores = new List<int>();
 		for(int i = 1; i<11; i++)
@@ -33,15 +36,26 @@ public class GameManager : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Gets the move speed.
+	/// </summary>
+	/// <returns>The move speed.</returns>
 	public float GetMoveSpeed()
 	{
 		return moveSpeed;
 	}
+	/// <summary>
+	/// Adjusts the move speed.
+	/// </summary>
+	/// <param name="amount">Amount.</param>
 	public void AdjustMoveSpeed(float amount)
 	{
 		moveSpeed += amount;
 	}
-
+	 /// <summary>
+	 /// Runs the game over functions.
+	 /// </summary>
+	 /// <param name="score">Score.</param>
     public void GameOver(int score)
     {
         scores.Add(score);

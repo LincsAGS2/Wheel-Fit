@@ -14,6 +14,9 @@ public class HighScoreGUI : MonoBehaviour {
 	int courseLengthIndex;
 
 	// Use this for initialization
+	/// <summary>
+	/// Start this instance.
+	/// </summary>
 	void Start () {
 		scores = new List<int> ();
 		courseLengthValues = new int[] {10,25,50,100,200};
@@ -27,6 +30,11 @@ public class HighScoreGUI : MonoBehaviour {
 	
 	}
 
+	/// <summary>
+	/// Gets the scores from player prefs.
+	/// </summary>
+	/// <returns>The scores.</returns>
+	/// <param name="courseLengthIn">Course length in.</param>
 	List<int> GetScores(int courseLengthIn)
 	{
 		List<int> tempScores = new List<int> ();
@@ -46,7 +54,10 @@ public class HighScoreGUI : MonoBehaviour {
 		return tempScores;
 	}
 
-
+	/// <summary>
+	/// Displaies the scores in the table.
+	/// </summary>
+	/// <param name="scoresIn">Scores in.</param>
 	void DisplayScores(List<int> scoresIn)
 	{
 		pageTitle.GetComponent<Text> ().text = "Downhill Best Scores " + courseLengthValues [courseLengthIndex] + "0m";
@@ -56,6 +67,9 @@ public class HighScoreGUI : MonoBehaviour {
 		}
 	}
 
+	/// <summary>
+	/// Nexts the high score table.
+	/// </summary>
 	public void NextTable()
 	{
 		if(courseLengthIndex < courseLengthValues.Length -1)
@@ -69,6 +83,10 @@ public class HighScoreGUI : MonoBehaviour {
 		DisplayScores(GetScores (courseLengthValues[courseLengthIndex]));
 	}
 
+
+	/// <summary>
+	/// Previouses the high score table.
+	/// </summary>
 	public void PreviousTable()
 	{
 		if(courseLengthIndex > 0)
