@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Controller : MonoBehaviour {
 
-	public float rotateSpeed, rotateLimit, moveSpeed, leftrightMoveLimit, forwardbackMoveLimit, xMod;
+	public float rotateSpeed, rotateLimit, moveSpeed, leftrightMoveLimit, forwardbackMoveLimit, xMod, zMod;
 	public GameManager gm;
 
 	// Use this for initialization
@@ -54,7 +54,7 @@ public class Controller : MonoBehaviour {
 
 	protected void MoveForward()
 	{
-		if (transform.position.z < forwardbackMoveLimit) 
+		if (transform.position.z < forwardbackMoveLimit + zMod) 
 		{
 			Vector3 tempPos = transform.position + new Vector3 (0, 0, moveSpeed * 0.01f);
 			transform.position = tempPos;
@@ -63,7 +63,7 @@ public class Controller : MonoBehaviour {
 
 	protected void MoveBack()
 	{
-		if (transform.position.z > -forwardbackMoveLimit) 
+		if (transform.position.z > -forwardbackMoveLimit + zMod) 
 		{
 			Vector3 tempPos = transform.position + new Vector3 (0, 0, -moveSpeed * 0.01f);
 			transform.position = tempPos;

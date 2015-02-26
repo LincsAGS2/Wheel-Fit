@@ -6,8 +6,7 @@ using UnityEngine.UI;
 
 public class LevelSpawner : MonoBehaviour {
 
-	public GameObject chunkPrefab;
-
+	public GameObject   chunkPrefab;
 	public int 			levelLength;
 	public double 		timeToComplete;
 	public Text 		gameOverText;
@@ -98,5 +97,6 @@ public class LevelSpawner : MonoBehaviour {
 		string gameOver = "Game Over!\nScore: " + timeToComplete.ToString ();
 		gameOverText.enabled = true;
 		gameOverText.text = gameOver;
+        gm.GameOver((int)timeToComplete);
 	}
 }

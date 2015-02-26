@@ -3,18 +3,21 @@ using System.Collections;
 
 using KinectNet20;
 using TankGameInput;
+using KinectForWheelchair;
 
 public class KinectInput : Controller {
 
 	// Variables for output
-	public GameInputInfo InputInfo;
+	//public GameInputInfo InputInfo;
+    public KinectForWheelchair.SeatedInfo seatedInfo;
+    SeatedInfoProcessor seatedInfoProcessor;
 	
 	// Kinect stuff
 	KinectSensor sensor;
 	Skeleton[] skeletonData;
 	
 	// Input processor
-	InputProcessor inputProcessor;
+	//InputProcessor inputProcessor;
 	
 	
 	// Use this for initialization
@@ -35,8 +38,8 @@ public class KinectInput : Controller {
 			throw new UnityException("Sensor could not be enabled.");
 		
 		// Create the input processor
-		inputProcessor = new InputProcessor(this.sensor.CoordinateMapper, DepthImageFormat.Resolution320x240Fps30);
-		this.InputInfo = inputProcessor.GameInputInfo;
+        seatedInfoProcessor = new SeatedInfoProcessor();
+		seatedInfo = null;
 		
 		Debug.Log("Hello");
 		return;
@@ -75,38 +78,61 @@ public class KinectInput : Controller {
 		}
 		
 		// Compute game input
-		this.InputInfo = inputProcessor.ProcessData(skeletonData);
+		SeatedInfo[] seatedInfos = this.seatedInfoProcessor.ComputeSeatedInfos(skeletonData);
+
+        int skeletonIndex = -1;
+		for (int i=0; i<skeletonData.Length; i++)
+		{
+			if(seatedInfos[i].Posture == Posture.Seated)
+				skeletonIndex = i;
+		}
+
+		// Compute seated info
+		if (skeletonIndex != -1)
+		{
+			this.seatedInfo = seatedInfos[skeletonIndex];
+			Debug.Log ("Tracking skeleton.");
+		}
 
 
+        if (seatedInfo == null) { return; };
+        if (seatedInfo.Features == null) { return; };
 
-		GameInputInfo inputInfo = InputInfo;
-
-
+        if (seatedInfo.Features.Angle > 5)
+        {
+            MoveRight();
+            RotateRight();
+        }
+        else if(seatedInfo.Features.Angle < -5)
+        {
+            MoveLeft();
+            RotateLeft();
+        }
 
 		// Set the soldier position
-		if (inputInfo.SoldierInfo.IsSkeletonAvailable) 
-		{
-			if (inputInfo.SoldierInfo.Position > 0) 
-			{
-				MoveRight();
-				RotateRight();
-			}
-			else if (inputInfo.SoldierInfo.Position < 0)
-			{
-				MoveLeft();
-				RotateLeft();
-			}
-			Debug.Log (inputInfo.SoldierInfo.Position);
-						//this.transform.position = Vector3.right * 3f * inputInfo.SoldierInfo.Position;
-		}
-		else
-		{
-			this.transform.position = Vector3.zero;
-		}
+        /*if (seatedInfo.SoldierInfo.IsSkeletonAvailable) 
+        {
+            if (inputInfo.SoldierInfo.Position > 0) 
+            {
+                MoveRight();
+                RotateRight();
+            }
+            else if (inputInfo.SoldierInfo.Position < 0)
+            {
+                MoveLeft();
+                RotateLeft();
+            }
+            Debug.Log (inputInfo.SoldierInfo.Position);
+                        //this.transform.position = Vector3.right * 3f * inputInfo.SoldierInfo.Position;
+        }
+        else
+        {
+            this.transform.position = Vector3.zero;
+        }
 		
-		if(inputInfo.SoldierInfo.IsSkeletonAvailable)
-			Debug.Log("Skeleton available.");
+        if(inputInfo.SoldierInfo.IsSkeletonAvailable)
+            Debug.Log("Skeleton available.");*/
 
 
-	}
+    }
 }	
