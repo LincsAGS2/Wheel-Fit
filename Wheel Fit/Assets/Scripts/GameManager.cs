@@ -4,21 +4,28 @@ using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour {
 
-    TextAsset highScores;
+
     List<int> scores;
     public int playerFinalScore;
+	public int courseLength;
 
 	public float moveSpeed;
 	// Use this for initialization
 	void Start () {
         scores = new List<int>();
-        highScores = Resources.Load("HighScores") as TextAsset;
-        string[] tempScores = highScores.text.Trim('\n').Split('\n');
-        tempScores = tempScores[0].Split(',');
-        foreach (string s in tempScores)
-        {
-            scores.Add(int.Parse(s));
-        }
+		for(int i = 1; i<11; i++)
+		{
+			string prefString = "DownHill" + courseLength.ToString() + i.ToString();
+			Debug.Log(prefString);
+
+			if(PlayerPrefs.GetInt(prefString) == 0)
+			{
+				PlayerPrefs.SetInt(prefString, 9999999);
+			}
+		
+			scores.Add(PlayerPrefs.GetInt(prefString));
+
+		}
 	}
 	
 	// Update is called once per frame
@@ -40,5 +47,10 @@ public class GameManager : MonoBehaviour {
         scores.Add(score);
         scores.Sort();
 
+		for(int i = 0; i<10; i++)
+		{
+			string prefString = "DownHill" + courseLength.ToString() + (i + 1).ToString();
+			PlayerPrefs.SetInt(prefString, scores[i]);
+		}
     }
 }

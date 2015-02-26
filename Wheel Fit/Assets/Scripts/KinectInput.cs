@@ -103,12 +103,12 @@ public class KinectInput : Controller {
         if (seatedInfo.Features.Angle > 5)
         {
             MoveRight();
-            RotateRight();
+            //RotateRight();
         }
         else if(seatedInfo.Features.Angle < -5)
         {
             MoveLeft();
-            RotateLeft();
+            //RotateLeft();
         }
     }
 }	

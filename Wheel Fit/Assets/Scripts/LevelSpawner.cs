@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class LevelSpawner : MonoBehaviour {
 
 	public GameObject   chunkPrefab;
-	public int 			levelLength;
 	public double 		timeToComplete;
 	public Text 		gameOverText;
 	public GameManager 	gm;
@@ -19,6 +18,7 @@ public class LevelSpawner : MonoBehaviour {
 	float 				moveSpeed;
 	bool 				running;
 	DateTime 			startTime;
+	int 				levelLength;
 
 
 	// Use this for initialization
@@ -38,6 +38,7 @@ public class LevelSpawner : MonoBehaviour {
 		moveSpeed = gm.GetMoveSpeed ();
 		chunkMoveVector = new Vector3 (0, 0, -moveSpeed / 100);
 		chunkResetVector = new Vector3 (-5, 0, 59);
+		levelLength = gm.courseLength;
 	}
 
 

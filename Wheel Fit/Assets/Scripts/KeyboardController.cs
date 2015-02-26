@@ -13,12 +13,12 @@ public class KeyboardController : Controller {
 
 		if (Input.GetKey (KeyCode.A)) 
 		{
-			RotateLeft();
+			//RotateLeft();
 			MoveLeft();
 		}
 		else if(Input.GetKey(KeyCode.D))
 		{
-			RotateRight();
+			//RotateRight();
 			MoveRight();
 		}
 
