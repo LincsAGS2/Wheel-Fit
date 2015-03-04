@@ -8,7 +8,7 @@ public class Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+	
 	}
 	
 	// Update is called once per frame
@@ -90,16 +90,16 @@ public class Controller : MonoBehaviour {
 
 	//added to fix collisions
 	void OnTriggerEnter(Collider c) {
-		if(c.collider.tag == "Obstacle")
-		{
-			Debug.Log("Hit Obstacle");
-			//stops the players speed going under 0.5f
-			if(gm.moveSpeed < 1.0f)
-			{
-			gm.AdjustMoveSpeed (-0.5f);
-			}
+		//if(c.collider.tag == "Obstacle")
+		//{
+		//	Debug.Log("Hit Obstacle");
+		//	//stops the players speed going under 0.5f
+		//	if(gm.moveSpeed < 1.0f)
+		//	{
+		//	gm.AdjustMoveSpeed (-0.5f);
+		//	}
 			
-		}
+		//}
 	}
 
 	/// <summary>
