@@ -88,6 +88,20 @@ public class Controller : MonoBehaviour {
 		}
 	}
 
+	//added to fix collisions
+	void OnTriggerEnter(Collider c) {
+		if(c.collider.tag == "Obstacle")
+		{
+			Debug.Log("Hit Obstacle");
+			//stops the players speed going under 0.5f
+			if(gm.moveSpeed < 1.0f)
+			{
+			gm.AdjustMoveSpeed (-0.5f);
+			}
+			
+		}
+	}
+
 	/// <summary>
 	/// Raises the trigger exit event.
 	/// </summary>
@@ -96,8 +110,8 @@ public class Controller : MonoBehaviour {
 	{
 		try
 		{
-			Debug.Log("Hit Obstacle");
-			gm.AdjustMoveSpeed (-0.5f);
+			//Debug.Log("Hit Obstacle");
+			//gm.AdjustMoveSpeed (-0.5f);
 		}
 		catch
 		{
