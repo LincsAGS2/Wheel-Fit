@@ -46,29 +46,13 @@ public class Chunk : MonoBehaviour{
 					temp.name = j.ToString();
 					temp.transform.position = tempPos;
 
-<<<<<<< HEAD
-					//commented out the below to fix the collisions
-					//if (j == 1)
-					//{
-						//temp.tag = "Obstacle";
-					//}
-
-					//if (temp.tag == "Obstacle")
-					//{
-						if (frnd > 95.0f)
-=======
 						if (frnd > 98.0f)
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
 						{
 							obstaclePos = new Vector3 (temp.transform.position.x + Random.value,2.5f,temp.transform.position.z + Random.value);
 							GameObject tempObj = Instantiate(obstacles[Random.Range(0, obstacles.Length)], obstaclePos, Quaternion.identity) as GameObject;
 							tempObj.tag = "Obstacle"; // added this as before the ground was being tagged a obsticle insted of the .. obsticles
 							tempObj.transform.SetParent(gameObject.transform);
 						}
-<<<<<<< HEAD
-					//}
-=======
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
 				}
 			}
 		}

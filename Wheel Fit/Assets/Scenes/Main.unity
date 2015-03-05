@@ -73,7 +73,6 @@ NavMeshSettings:
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-    tileSizeHint: 0
   m_NavMesh: {fileID: 0}
 --- !u!1 &50922996
 GameObject:
@@ -276,13 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-=======
   ignoreReversedGraphics: 1
   blockingObjects: 0
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -338,11 +332,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 8
-=======
   m_RootOrder: 7
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -511,13 +501,10 @@ Prefab:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-=======
     - target: {fileID: 11455862, guid: 7af6f84b836d5504093f9e4b69e7e3fe, type: 2}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7af6f84b836d5504093f9e4b69e7e3fe, type: 2}
   m_RootGameObject: {fileID: 1882440190}
@@ -727,8 +714,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1877,11 +1864,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22488670, guid: 4f4c437e1ae50a64e9abca0a5c494615, type: 2}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 8
-=======
       value: 7
->>>>>>> origin/Thomas_Sprint_2_Week_1_NPC_Obstacle
       objectReference: {fileID: 0}
     - target: {fileID: 22488670, guid: 4f4c437e1ae50a64e9abca0a5c494615, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -2882,8 +2865,8 @@ MonoBehaviour:
   m_Script: {fileID: 1301386320, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
+  ignoreReversedGraphics: 1
+  blockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
