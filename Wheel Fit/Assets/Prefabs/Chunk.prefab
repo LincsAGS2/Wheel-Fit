@@ -45,6 +45,7 @@ MonoBehaviour:
   obstacle2: {fileID: 100000, guid: 567c828c14d135d4b9cd6267c4f4b1ee, type: 3}
   obstacle3: {fileID: 100004, guid: 1b65187464fd5b04c8dcbb375c2ccc76, type: 3}
   obstacle4: {fileID: 188484, guid: 0a5614dacaf3bd94cae1dd24ab12e552, type: 2}
+  NPCSkiier: {fileID: 194928, guid: 977e4db031eb1284da6f67718c2946a2, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
