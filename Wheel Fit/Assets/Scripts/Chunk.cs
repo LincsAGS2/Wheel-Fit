@@ -46,7 +46,7 @@ public class Chunk : MonoBehaviour{
 					temp.name = j.ToString();
 					temp.transform.position = tempPos;
 
-						if (frnd > 98.0f)
+						if (frnd > 98.5f)
 						{
 							obstaclePos = new Vector3 (temp.transform.position.x + Random.value,2.5f,temp.transform.position.z + Random.value);
 							GameObject tempObj = Instantiate(obstacles[Random.Range(0, obstacles.Length)], obstaclePos, Quaternion.identity) as GameObject;
@@ -57,7 +57,7 @@ public class Chunk : MonoBehaviour{
 			}
 		}
 		//Maby add the chance for the NPC to spawn here???
-		obstaclePos = new Vector3 (temp.transform.position.x + Random.value,1.5f,temp.transform.position.z + Random.value);
+		obstaclePos = new Vector3 (temp.transform.position.x + Random.value,2.0f,temp.transform.position.z + Random.value);
 		GameObject tempNPC = Instantiate(NPCSkiier, obstaclePos, Quaternion.identity) as GameObject;
 		tempNPC.tag = "NPC";
 		tempNPC.transform.SetParent(gameObject.transform);
