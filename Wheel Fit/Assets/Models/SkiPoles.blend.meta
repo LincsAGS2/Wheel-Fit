@@ -1,14 +1,50 @@
 fileFormatVersion: 2
-guid: e587556103802014197b6907fc503516
+guid: af9110dbb9c7a0f4a952cd3599d46b14
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Cylinder
-    6400000: //RootNode
+    100000: Cone
+    100002: Cone_001
+    100004: Cylinder
+    100006: Cylinder_001
+    100008: Cylinder_002
+    100010: Cylinder_003
+    100012: Cylinder_004
+    100014: Cylinder_005
+    100016: //RootNode
+    400000: Cone
+    400002: Cone_001
+    400004: Cylinder
+    400006: Cylinder_001
+    400008: Cylinder_002
+    400010: Cylinder_003
+    400012: Cylinder_004
+    400014: Cylinder_005
+    400016: //RootNode
+    2300000: Cone
+    2300002: Cone_001
+    2300004: Cylinder
+    2300006: Cylinder_001
+    2300008: Cylinder_002
+    2300010: Cylinder_003
+    2300012: Cylinder_004
+    2300014: Cylinder_005
+    3300000: Cone
+    3300002: Cone_001
+    3300004: Cylinder
+    3300006: Cylinder_001
+    3300008: Cylinder_002
+    3300010: Cylinder_003
+    3300012: Cylinder_004
+    3300014: Cylinder_005
+    4300000: Cylinder_001
+    4300002: Cone
+    4300004: Cylinder
+    4300006: Cylinder_002
+    4300008: Cone_001
+    4300010: Cylinder_003
+    4300012: Cylinder_004
+    4300014: Cylinder_005
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -32,7 +68,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

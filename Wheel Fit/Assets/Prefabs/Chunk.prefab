@@ -41,9 +41,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   preCube: {fileID: 126836, guid: 660e22d69121c5f4a9447338b5629045, type: 2}
   obstacles: []
-  obstacle1: {fileID: 100000, guid: 82e81ea117c3e4140853088c00d28644, type: 3}
-  obstacle2: {fileID: 100000, guid: 567c828c14d135d4b9cd6267c4f4b1ee, type: 3}
-  obstacle3: {fileID: 100004, guid: 1b65187464fd5b04c8dcbb375c2ccc76, type: 3}
+  obstacle1: {fileID: 100000, guid: e587556103802014197b6907fc503516, type: 3}
+  obstacle2: {fileID: 100000, guid: 8fc24d2e5c59bde4492dd370ca596069, type: 3}
+  obstacle3: {fileID: 100004, guid: 669ab9fb857cea741959f1ef89d879a0, type: 3}
   obstacle4: {fileID: 188484, guid: 0a5614dacaf3bd94cae1dd24ab12e552, type: 2}
   NPCSkiier: {fileID: 194928, guid: 977e4db031eb1284da6f67718c2946a2, type: 2}
 --- !u!1001 &100100000
