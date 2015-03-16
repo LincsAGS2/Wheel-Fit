@@ -17,8 +17,7 @@ public class kinectinput2 : Controller {
 	Skeleton[] skeletonData;
 	
 	// Input processor
-	//InputProcessor inputProcessor;
-	
+	InputProcessor inputProcessor;
 	
 	// Use this for initialization
 	void Start ()
@@ -61,7 +60,7 @@ public class kinectinput2 : Controller {
 	// Update is called once per frame
 	void Update ()
 	{
-		
+
 		// Retrieve skeleton data
 		using(SkeletonFrame frame = this.sensor.SkeletonStream.OpenNextFrame(0))
 		{
@@ -100,23 +99,18 @@ public class kinectinput2 : Controller {
 		
 		Debug.Log (seatedInfo.Features.Angle);
 		
-		if (seatedInfo.Features.Angle > 5)
+		if (seatedInfo.Features.Angle > 5 || Input.GetKeyDown(KeyCode.RightArrow))
 		{
 			//MoveRight();
 			RotateRight();
 		}
-		else if(seatedInfo.Features.Angle < -5)
+		else if(seatedInfo.Features.Angle < -5|| Input.GetKeyDown(KeyCode.LeftArrow))
 		{
 			//MoveLeft();
 			RotateLeft();
 		}
-		else if(seatedInfo.Features.Distance < 5)
-		{
-            MoveForward();
-		}
-        else if (seatedInfo.Features.Distance > 7)
-        {
-            MoveBackward();
-        }
+
+        this.transform.position = new Vector3(seatedInfo.Features.Position.x, 0, seatedInfo.Features.Position.y) * 5;
+        this.transform.forward = new Vector3(seatedInfo.Features.Direction.x, 0, seatedInfo.Features.Direction.y) * 5;
 	}
 }	
