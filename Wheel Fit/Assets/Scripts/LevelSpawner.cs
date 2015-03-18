@@ -107,7 +107,7 @@ public class LevelSpawner : MonoBehaviour {
 			PlayerPrefs.SetInt("Score4", PlayerPrefs.GetInt ("Score3"));
 			PlayerPrefs.SetInt("Score3", PlayerPrefs.GetInt ("Score2"));
 			PlayerPrefs.SetInt("Score2", PlayerPrefs.GetInt ("Score1"));
-			PlayerPrefs.SetInt("Score1", timeToComplete);
+			PlayerPrefs.SetInt("Score1", time);
 		}
 		else if(time > PlayerPrefs.GetInt ("Score2"))
 		{
@@ -184,7 +184,7 @@ public class LevelSpawner : MonoBehaviour {
 
 		string gameOver = "Game Over!\nScore: " + timeToComplete.ToString ();
 
-		updateScoreboard(timeToComplete);
+		updateScoreboard((int)timeToComplete);
 
 		gameOverText.enabled = true;
 		gameOverText.text = gameOver;
