@@ -87,6 +87,8 @@ GameObject:
   - 23: {fileID: 4502261}
   - 114: {fileID: 4502260}
   - 114: {fileID: 4502265}
+  - 54: {fileID: 4502267}
+  - 114: {fileID: 4502266}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -101,7 +103,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1410787644}
   m_GameObject: {fileID: 4502259}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e2c4ff30c32ce854bacc7c6e7a2b7e05, type: 3}
   m_Name: 
@@ -111,6 +113,9 @@ MonoBehaviour:
   moveSpeed: 5
   leftrightMoveLimit: 3
   forwardbackMoveLimit: 3
+  xMod: 0
+  zMod: 0
+  gm: {fileID: 0}
 --- !u!23 &4502261
 Renderer:
   m_ObjectHideFlags: 0
@@ -124,7 +129,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5c00d61de98f14f44bd038bf39aa6469, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -182,6 +187,44 @@ MonoBehaviour:
   moveSpeed: 5
   leftrightMoveLimit: 3
   forwardbackMoveLimit: 3
+  xMod: 0
+  zMod: 0
+  gm: {fileID: 0}
+--- !u!114 &4502266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 4502259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ce556be771b6244b241856c5b3497f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 5
+  rotateLimit: 45
+  moveSpeed: 0
+  leftrightMoveLimit: 0
+  forwardbackMoveLimit: 0
+  xMod: 0
+  zMod: 0
+  gm: {fileID: 0}
+--- !u!54 &4502267
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5493806, guid: bf6eb659ada33a641b38c29efcccc86e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1410787644}
+  m_GameObject: {fileID: 4502259}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &558573857
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,6 +480,10 @@ Prefab:
     - target: {fileID: 410312, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11410312, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf6eb659ada33a641b38c29efcccc86e, type: 2}

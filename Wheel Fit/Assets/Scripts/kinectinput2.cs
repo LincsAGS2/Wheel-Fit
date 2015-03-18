@@ -99,18 +99,27 @@ public class kinectinput2 : Controller {
 		
 		Debug.Log (seatedInfo.Features.Angle);
 		
-		if (seatedInfo.Features.Angle > 5 || Input.GetKeyDown(KeyCode.RightArrow))
+		if (seatedInfo.Features.Angle > 5 || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 		{
 			//MoveRight();
-			RotateRight();
+			//RotateRight();
+			this.transform.Rotate(0, 0.5f, 0);
 		}
-		else if(seatedInfo.Features.Angle < -5|| Input.GetKeyDown(KeyCode.LeftArrow))
+		if(seatedInfo.Features.Angle < -5|| Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
 		{
 			//MoveLeft();
-			RotateLeft();
+			//RotateLeft();
+			this.transform.Rotate(0, -0.5f, 0);
 		}
-
-        this.transform.position = new Vector3(seatedInfo.Features.Position.x, 0, seatedInfo.Features.Position.y) * 5;
-        this.transform.forward = new Vector3(seatedInfo.Features.Direction.x, 0, seatedInfo.Features.Direction.y) * 5;
+		if(seatedInfo.Features.Position.x > 10 || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+		{
+			this.transform.position += Vector3.forward;
+		}
+		else if(seatedInfo.Features.Position.x < 10 || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+		{
+			this.transform.position += Vector3.back;
+		}
+     //   this.transform.position = new Vector3(seatedInfo.Features.Position.x, 0, seatedInfo.Features.Position.y) * 5;
+    //    this.transform.forward = new Vector3(seatedInfo.Features.Direction.x, 0, seatedInfo.Features.Direction.y) * 5;
 	}
 }	
