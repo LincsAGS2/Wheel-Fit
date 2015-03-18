@@ -94,6 +94,83 @@ public class LevelSpawner : MonoBehaviour {
 		}
 	}
 
+	///updates scoreboard
+	void updateScoreboard(int time)
+	{
+		if(time > PlayerPrefs.GetInt ("Score1"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", PlayerPrefs.GetInt ("Score5"));
+			PlayerPrefs.SetInt("Score5", PlayerPrefs.GetInt ("Score4"));
+			PlayerPrefs.SetInt("Score4", PlayerPrefs.GetInt ("Score3"));
+			PlayerPrefs.SetInt("Score3", PlayerPrefs.GetInt ("Score2"));
+			PlayerPrefs.SetInt("Score2", PlayerPrefs.GetInt ("Score1"));
+			PlayerPrefs.SetInt("Score1", timeToComplete);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score2"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", PlayerPrefs.GetInt ("Score5"));
+			PlayerPrefs.SetInt("Score5", PlayerPrefs.GetInt ("Score4"));
+			PlayerPrefs.SetInt("Score4", PlayerPrefs.GetInt ("Score3"));
+			PlayerPrefs.SetInt("Score3", PlayerPrefs.GetInt ("Score2"));
+			PlayerPrefs.SetInt("Score2", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score3"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", PlayerPrefs.GetInt ("Score5"));
+			PlayerPrefs.SetInt("Score5", PlayerPrefs.GetInt ("Score4"));
+			PlayerPrefs.SetInt("Score4", PlayerPrefs.GetInt ("Score3"));
+			PlayerPrefs.SetInt("Score3", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score4"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", PlayerPrefs.GetInt ("Score5"));
+			PlayerPrefs.SetInt("Score5", PlayerPrefs.GetInt ("Score4"));
+			PlayerPrefs.SetInt("Score4", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score5"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", PlayerPrefs.GetInt ("Score5"));
+			PlayerPrefs.SetInt("Score5", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score6"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", PlayerPrefs.GetInt ("Score6"));
+			PlayerPrefs.SetInt("Score6", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score7"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", PlayerPrefs.GetInt ("Score7"));
+			PlayerPrefs.SetInt("Score7", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score8"))
+		{
+			PlayerPrefs.SetInt("Score9", PlayerPrefs.GetInt ("Score8"));
+			PlayerPrefs.SetInt("Score8", time);
+		}
+		else if(time > PlayerPrefs.GetInt ("Score9"))
+		{
+			PlayerPrefs.SetInt("Score9", time);
+		}
+	}
+
 	/// <summary>
 	/// Ends the game.
 	/// </summary>
@@ -103,10 +180,12 @@ public class LevelSpawner : MonoBehaviour {
 		running = false;
 		Debug.Log (startTime);
 		Debug.Log (endTime);
-
 		timeToComplete = Mathf.Round((float)(endTime - startTime).TotalSeconds);
 
 		string gameOver = "Game Over!\nScore: " + timeToComplete.ToString ();
+
+		updateScoreboard(timeToComplete);
+
 		gameOverText.enabled = true;
 		gameOverText.text = gameOver;
         gm.GameOver((int)timeToComplete);
