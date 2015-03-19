@@ -20,7 +20,8 @@ public class NPCSpawner : MonoBehaviour {
 	public float NPCSpeed;
 	[Header("Debug")]
 	public bool DisplaySpawnRange;
-	void Start ()
+
+	public void SpawnNPCs ()
 	{
 		GameObject[]CurrentObsticles = GameObject.FindGameObjectsWithTag ("Obstacle");
 
