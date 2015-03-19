@@ -1151,6 +1151,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 100050, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
+      propertyPath: m_TagString
+      value: LevelStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
+      propertyPath: m_TagString
+      value: LevelStart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
   m_RootGameObject: {fileID: 169299104}
@@ -1889,7 +1897,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 517864419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ad56ba53e2475645afd7dd459d4d367, type: 3}
   m_Name: 
@@ -3807,9 +3815,10 @@ GameObject:
   - 33: {fileID: 1295701869}
   - 23: {fileID: 1295701868}
   - 114: {fileID: 1295701867}
+  - 64: {fileID: 1295701870}
   m_Layer: 0
   m_Name: GoSkiingDoor
-  m_TagString: Untagged
+  m_TagString: LevelStart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3865,6 +3874,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 317268756}
   m_GameObject: {fileID: 1295701865}
+  m_Mesh: {fileID: 4300034, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
+--- !u!64 &1295701870
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1295701865}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300034, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
 --- !u!1 &1301800464
 GameObject:
@@ -4457,9 +4479,10 @@ GameObject:
   - 33: {fileID: 1574457123}
   - 23: {fileID: 1574457122}
   - 114: {fileID: 1574457121}
+  - 64: {fileID: 1574457124}
   m_Layer: 0
   m_Name: Cube_017
-  m_TagString: Untagged
+  m_TagString: LevelStart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4515,6 +4538,19 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 317268756}
   m_GameObject: {fileID: 1574457119}
+  m_Mesh: {fileID: 4300044, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
+--- !u!64 &1574457124
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1574457119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 0
   m_Mesh: {fileID: 4300044, guid: 8a11d98a02950214e83d02344c997d84, type: 3}
 --- !u!1 &1592669836
 GameObject:
