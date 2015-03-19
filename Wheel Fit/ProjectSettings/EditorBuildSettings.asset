@@ -8,6 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/splashScene.unity
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
+    path: Assets/Scenes/game_start.unity
   - enabled: 1
     path: Assets/Scenes/Main.unity
+  - enabled: 0
+    path: Assets/Scenes/Menu.unity

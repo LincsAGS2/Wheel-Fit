@@ -75,7 +75,28 @@ public class kinectinput2 : Controller {
 				frame.CopySkeletonDataTo(skeletonData);
 			}
 		}
-		
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+        {
+            MoveRight();
+            //RotateRight();
+          //  this.transform.Rotate(0, 0.5f, 0);
+        }
+        if ( Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+        {
+            MoveLeft();
+            //RotateLeft();
+          //  this.transform.Rotate(0, -0.5f, 0);
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+        {
+            Vector3 v = new Vector3(0.1f * Vector3.forward.x, 0.1f * Vector3.forward.y, 0.1f * Vector3.forward.z);
+            this.transform.position += v;
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        {
+            Vector3 v = new Vector3(0.1f * Vector3.back.x, 0.1f * Vector3.back.y, 0.1f * Vector3.back.z);
+            this.transform.position += v;
+        }
 		// Compute game input
 		SeatedInfo[] seatedInfos = this.seatedInfoProcessor.ComputeSeatedInfos(skeletonData);
 		
@@ -99,18 +120,29 @@ public class kinectinput2 : Controller {
 		
 		Debug.Log (seatedInfo.Features.Angle);
 		
-		if (seatedInfo.Features.Angle > 5 || Input.GetKeyDown(KeyCode.RightArrow))
+		if (seatedInfo.Features.Angle > 6)
 		{
-			//MoveRight();
-			RotateRight();
+			MoveRight();
+			//RotateRight();
+		//	this.transform.Rotate(0, 0.5f, 0);
 		}
-		else if(seatedInfo.Features.Angle < -5|| Input.GetKeyDown(KeyCode.LeftArrow))
+		if(seatedInfo.Features.Angle < -6)
 		{
-			//MoveLeft();
-			RotateLeft();
+			MoveLeft();
+			//RotateLeft();
+		//	this.transform.Rotate(0, -0.5f, 0);
 		}
-
-        this.transform.position = new Vector3(seatedInfo.Features.Position.x, 0, seatedInfo.Features.Position.y) * 5;
-        this.transform.forward = new Vector3(seatedInfo.Features.Direction.x, 0, seatedInfo.Features.Direction.y) * 5;
+		if(seatedInfo.Features.Position.x < 0)
+		{
+            Vector3 v = new Vector3(0.1f * Vector3.forward.x, 0.1f * Vector3.forward.y , 0.1f * Vector3.forward.z);
+			this.transform.position += v;
+		}
+		else if(seatedInfo.Features.Position.x > 5.0f)
+		{
+            Vector3 v = new Vector3(0.1f * Vector3.back.x, 0.1f * Vector3.back.y, 0.1f * Vector3.back.z);
+            this.transform.position += v;
+		}
+     //   this.transform.position = new Vector3(seatedInfo.Features.Position.x, 0, seatedInfo.Features.Position.y) * 5;
+    //    this.transform.forward = new Vector3(seatedInfo.Features.Direction.x, 0, seatedInfo.Features.Direction.y) * 5;
 	}
 }	
