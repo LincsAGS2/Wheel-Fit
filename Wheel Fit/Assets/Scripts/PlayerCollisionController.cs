@@ -68,11 +68,11 @@ public class PlayerCollisionController : MonoBehaviour {
 
 		if(c.collider.tag == "PowerUP")
 		{
-			if(c.collider.name == "Points")
+			if(c.collider.name == "Points(Clone)")
 			{
-				gm.SetPlayerScore(100);
+				gm.AddPlayerScore(100);
 			}
-			if(c.collider.name == "Speed")
+			if(c.collider.name == "Speed(Clone)")
 			{
 				gm.AdjustMoveSpeed(5);
 			}
