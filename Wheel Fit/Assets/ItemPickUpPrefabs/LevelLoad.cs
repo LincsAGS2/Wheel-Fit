@@ -8,7 +8,7 @@ public class LevelLoad : MonoBehaviour
 			if(other.gameObject.tag == "LevelStart")
 			{
 				other.gameObject.SetActive(false);
-			    Application.LoadLevel("SkiingGame");
+			    Application.LoadLevel("Main");
 				Debug.Log("Load Level");
 			}
 		}
