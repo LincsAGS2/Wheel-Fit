@@ -3,12 +3,16 @@ using System.Collections;
 
 public class splashScreen : MonoBehaviour
 {
+	float timeLeft = 5;
+
 
 	void Update()
 	{
-		if(Input.GetKeyDown(KeyCode.Return))
+		timeLeft -= Time.deltaTime;
+		if ( timeLeft < 0 )
 		{
-			Application.LoadLevel("Menu");
+			Application.LoadLevel("Main");
+			Debug.Log ("Main Game Loaded");
 		}
 	}
 	

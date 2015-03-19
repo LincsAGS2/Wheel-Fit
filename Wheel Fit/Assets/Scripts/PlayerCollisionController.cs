@@ -44,7 +44,7 @@ public class PlayerCollisionController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider c) {
-		if(c.collider.tag == "Obstacle")
+		if(c.GetComponent<Collider>().tag == "Obstacle")
 		{
 			Debug.Log("Hit Obstacle");
 			//stops the players speed going under 0.5f

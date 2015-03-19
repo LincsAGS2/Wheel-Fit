@@ -66,7 +66,7 @@ public class BasicBuoyancy: MonoBehaviour
 		//pushes the object down into the water ( incase it bounced to far up )
 		if(transform.position.y < Water.transform.position.y+1)
 		{
-			rigidbody.AddForce(Vector3.up * UpForce);				
+			GetComponent<Rigidbody>().AddForce(Vector3.up * UpForce);				
 		}
 	}
 }

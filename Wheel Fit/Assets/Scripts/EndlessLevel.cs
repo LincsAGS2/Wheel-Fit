@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System;
 using UnityEngine.UI;
 
-public class LevelSpawner : MonoBehaviour {
-
+public class EndlessLevel : MonoBehaviour {
+	
 	public GameObject   chunkPrefab;
 	public double 		timeToComplete;
 	public Text 		gameOverText;
@@ -19,18 +19,18 @@ public class LevelSpawner : MonoBehaviour {
 	bool 				running;
 	DateTime 			startTime;
 	int 				levelLength;
-
-
+	
+	
 	// Use this for initialization
 	/// <summary>
 	/// Start this instance.
 	/// </summary>
 	void Start () {
-
+		
 		startTime = DateTime.Now;
 		gm = FindObjectOfType<GameManager> ().GetComponent<GameManager>();
 		running = true;
-
+		
 		chunks = new List<GameObject> ();
 		for (int i = 0; i<7; i++) 
 		{
@@ -38,15 +38,15 @@ public class LevelSpawner : MonoBehaviour {
 			chunks.Add(Instantiate (chunkPrefab) as GameObject);
 			chunks[i].transform.position += positionAdjust;
 		}
-
+		
 		moveSpeed = gm.GetMoveSpeed ();
 		chunkMoveVector = new Vector3 (0, 0, -moveSpeed / 100);
 		chunkResetVector = new Vector3 (-5, 0, 59);
 		levelLength = gm.courseLength;
 	}
-
-
-
+	
+	
+	
 	/// <summary>
 	/// Fixeds the update.
 	/// </summary>
@@ -57,10 +57,11 @@ public class LevelSpawner : MonoBehaviour {
 			MoveChunks ();
 			if(chunkCount >= levelLength)
 			{
-				endGame();
+				//doesn't call end game state, creates endless level
+				ContinueGame();
 			}
 		}
-
+		
 		if(Input.GetKey(KeyCode.UpArrow))
 		{
 			moveSpeed++;
@@ -71,15 +72,15 @@ public class LevelSpawner : MonoBehaviour {
 			moveSpeed--;
 			chunkMoveVector = new Vector3(0, 0, -moveSpeed / 100);
 		}
-	
+		
 	}
-
+	
 	/// <summary>
 	/// Moves the chunks.
 	/// </summary>
 	void MoveChunks()
 	{
-
+		
 		foreach (GameObject g in chunks) 
 		{
 			if(g.transform.position.z <= -10)
@@ -87,29 +88,44 @@ public class LevelSpawner : MonoBehaviour {
 				g.transform.position = chunkResetVector;
 				chunkCount++;
 				if(gm.GetMoveSpeed() < maxMoveSpeed)
-				gm.AdjustMoveSpeed(1);
+					gm.AdjustMoveSpeed(1);
 			}
 			chunkMoveVector = new Vector3 (0, 0, -moveSpeed / 100);
 			g.transform.position += chunkMoveVector;
-
+			
 		}
 	}
-
+	
 	/// <summary>
 	/// Ends the game.
 	/// </summary>
+	/// 
+	 void ContinueGame()
+	{
+		DateTime endTime = DateTime.Now;
+		running = true;
+		Debug.Log (startTime);
+		Debug.Log (endTime);
+		
+		//timeToComplete = Mathf.Round((float)(endTime - startTime).TotalSeconds);
+		
+		string gameOver = "Game Over!\nScore: " + timeToComplete.ToString ();
+		gameOverText.enabled = true;
+		gameOverText.text = gameOver;
+		gm.GameOver((int)timeToComplete);
+	}
 	void endGame()
 	{
 		DateTime endTime = DateTime.Now;
 		running = false;
 		Debug.Log (startTime);
 		Debug.Log (endTime);
-
+		
 		timeToComplete = Mathf.Round((float)(endTime - startTime).TotalSeconds);
-
+		
 		string gameOver = "Game Over!\nScore: " + timeToComplete.ToString ();
 		gameOverText.enabled = true;
 		gameOverText.text = gameOver;
-        gm.GameOver((int)timeToComplete);
+		gm.GameOver((int)timeToComplete);
 	}
 }
