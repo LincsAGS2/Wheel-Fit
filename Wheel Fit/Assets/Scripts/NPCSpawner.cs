@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ObsticleSpawner : MonoBehaviour
-{
-	[Header("How many Obstacles spawn at a time")]
+public class NPCSpawner : MonoBehaviour {
+
+	[Header("How many Npc's spawn at a time")]
 	public int SpawnAmount;
 	[Header("Spawn range from gameobject X Z")]
 	public float XAxisRange;
@@ -14,31 +14,35 @@ public class ObsticleSpawner : MonoBehaviour
 	public float MinimumDistance;
 	[Header("How much it can fail before stoping")]
 	public int FailCounter;
-	[Header("Obstacles PreFabs")]
-	public GameObject[] Obstacles;
+	[Header("NPC PreFab")]
+	public GameObject NPC;
+	[Header("NPC Move speed")]
+	public float NPCSpeed;
 	[Header("Debug")]
 	public bool DisplaySpawnRange;
 
-	public void SpawnObstacles ()
+	public void SpawnNPCs ()
 	{
-		GameObject[]CurrentObsticles;
+		GameObject[]CurrentObsticles = GameObject.FindGameObjectsWithTag ("Obstacle");
+
 		float RayDistance = 100f;
 		RaycastHit HitInfo;
 		int FailCounter = 0;
+
 		for (int i = 0; i < SpawnAmount; i++) {
 			if(FailCounter >5) break;
-
+			
 			bool CanBuild = true;
 			Vector3 SpawnLocation = new Vector3 (transform.position.x + UnityEngine.Random.Range (-XAxisRange, XAxisRange),
 			                                     transform.position.y + SpawnYAxis,
-			                                     transform.position.z + UnityEngine.Random.Range (-ZAxisRange, ZAxisRange)); 
-
+			                                     transform.position.z + UnityEngine.Random.Range (-ZAxisRange, ZAxisRange));
+			
 			if (Physics.Raycast (SpawnLocation, Vector3.down, out HitInfo, RayDistance)) 
 			{
 				if (HitInfo.collider.tag == "Ground") 
 				{
 					CurrentObsticles = GameObject.FindGameObjectsWithTag ("Obstacle");
-
+					
 					foreach(GameObject ActiveObsticles in CurrentObsticles)
 					{
 						float temp = Vector3.Distance (HitInfo.point, ActiveObsticles.transform.position);
@@ -49,32 +53,31 @@ public class ObsticleSpawner : MonoBehaviour
 							FailCounter++;
 						}
 					}
-
+					
 					if(CanBuild == true)
 					{
-						Debug.Log("hey hey");
+						Debug.Log("NPC SPAWNED");
 						FailCounter = 0;
-						GameObject tempObj = Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], SpawnLocation, Quaternion.identity) as GameObject;
-						tempObj.tag = "Obstacle"; // added this as before the ground was being tagged a obsticle insted of the .. obsticles
+						GameObject tempObj = Instantiate(NPC, SpawnLocation, Quaternion.identity) as GameObject;
+						tempObj.tag = "NPC"; // added this as before the ground was being tagged a obsticle insted of the .. obsticles
 						tempObj.transform.SetParent(gameObject.transform);
+						tempObj.GetComponent<NavMeshNPC>().SetTargetLocation(new Vector3(20,0,10),NPCSpeed);
 					}					
 				}	
 				else //didnt hit tag "Ground"
 				{
 					i--;
 					FailCounter++;
-					Debug.Log ("Obsticle Spawner failed to hit the Ground");
+					Debug.Log ("NPC Spawner failed to hit the Ground");
 				}
 			}
 			else// didnt hit anything
 			{
 				i--;
 				FailCounter++;
-				Debug.Log ("Obsticle Spawner failed to hit anything");
+				Debug.Log ("NPC Spawner failed to hit anything");
 			}
 		}
-		CurrentObsticles = GameObject.FindGameObjectsWithTag ("Obstacle");
-		Debug.Log(CurrentObsticles.Length + " out of " +  SpawnAmount + "Obstacles Spawned");
 	}
 	void Update()
 	{
