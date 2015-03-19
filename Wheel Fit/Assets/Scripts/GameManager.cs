@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 	public int courseLength;
 	
 	public float moveSpeed;
+	public int ObstaclesHit;
 	// Use this for initialization
 	/// <summary>
 	/// Start this instance.
@@ -56,6 +57,15 @@ public class GameManager : MonoBehaviour {
 	public void SetPlayerScore()
 	{
 		PlayerScore += 10;
+	}
+
+	public float GetObstaclesHit()
+	{
+		return ObstaclesHit;
+	}
+	public void SetObstaclesHit(int Num)
+	{
+		ObstaclesHit += Num;
 	}
 	/// <summary>
 	/// Adjusts the move speed.

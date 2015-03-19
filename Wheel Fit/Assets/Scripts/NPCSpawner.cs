@@ -61,7 +61,7 @@ public class NPCSpawner : MonoBehaviour {
 						GameObject tempObj = Instantiate(NPC, SpawnLocation, Quaternion.identity) as GameObject;
 						tempObj.tag = "NPC"; // added this as before the ground was being tagged a obsticle insted of the .. obsticles
 						tempObj.transform.SetParent(gameObject.transform);
-						tempObj.GetComponent<NavMeshNPC>().SetTargetLocation(new Vector3(20,0,10),NPCSpeed);
+						tempObj.GetComponent<NavMeshNPC>().SetTargetLocation(new Vector3(0,0,100),NPCSpeed);
 					}					
 				}	
 				else //didnt hit tag "Ground"

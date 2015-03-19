@@ -37,7 +37,7 @@ public class NavMeshNPC : MonoBehaviour {
 
 		if(MyNavAgent.transform.position.z >= TargetLocation.z-0.5f) // incase the bot gets pushed fowards by another bot or there is a obsticle
 		{
-			Destroy(gameObject); // destroy the bot once it reaches its destination
+			//Destroy(gameObject); // destroy the bot once it reaches its destination
 		}
 	}
 	public void SetTargetLocation(Vector3 Target, float speed)

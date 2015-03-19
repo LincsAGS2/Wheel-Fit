@@ -79,7 +79,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 49.6199989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 491008}
@@ -101,14 +101,12 @@ MonoBehaviour:
   XAxisRange: 10
   ZAxisRange: 20
   SpawnYAxis: 0
-  MinimumDistance: 0
+  MinimumDistance: 5
   FailCounter: 5
   Obstacles:
-  - {fileID: 119772, guid: ad9ef9cdd2854834693ca9476d439333, type: 2}
-  - {fileID: 166638, guid: a3e8f86921a26d148b820f226c852634, type: 2}
-  - {fileID: 175848, guid: f83c061259f708642be2340596cb676f, type: 2}
-  - {fileID: 188484, guid: 0a5614dacaf3bd94cae1dd24ab12e552, type: 2}
-  DisplaySpawnRange: 0
+  - {fileID: 189014, guid: a894e5a6c252a694a908a72252fded5b, type: 2}
+  - {fileID: 135942, guid: be160819ca22248498fd17f6f55695ab, type: 2}
+  DisplaySpawnRange: 1
 --- !u!114 &11491010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,11 +118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14bf2f114d34a8c4e8a181c908293b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnAmount: 2
+  SpawnAmount: 1
   XAxisRange: 10
   ZAxisRange: 10
   SpawnYAxis: 0
-  MinimumDistance: 0
+  MinimumDistance: 2
   FailCounter: 2
   NPC: {fileID: 177650, guid: 3bc615b8d91b1ff489ecec694f10cbd9, type: 2}
   NPCSpeed: 5

@@ -9,6 +9,7 @@ public class GUIScript : MonoBehaviour {
 	public float mySpeed;
 	public float myScore;
 	public float myDistance;
+	public float MyObstaclesHit;
 
 	public GameObject ScoreText;
 	public GameObject TimeText;
@@ -43,13 +44,14 @@ public class GUIScript : MonoBehaviour {
 		//Game Manager stuff...
 		mySpeed = gm.GetMoveSpeed();
 		myScore = gm.GetPlayerScore ();
+		MyObstaclesHit = gm.GetObstaclesHit();
 
 		//update text
 		ScoreText.GetComponent<Text>().text = "Score : " + myScore;
 		TimeText.GetComponent<Text>().text = "Time : " + gameTime;
 		DistanceText.GetComponent<Text>().text = "Distance : " + myDistance + " Mile";
 		SpeedText.GetComponent<Text>().text = "Current Speed/sec : " + mySpeed;
-		ObstaclesText.GetComponent<Text>().text = "Obstacles Hit : " + "";
+		ObstaclesText.GetComponent<Text>().text = "Obstacles Hit : " + MyObstaclesHit;
 
 
 	}

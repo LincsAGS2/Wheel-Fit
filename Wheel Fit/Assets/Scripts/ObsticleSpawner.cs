@@ -52,7 +52,6 @@ public class ObsticleSpawner : MonoBehaviour
 
 					if(CanBuild == true)
 					{
-						Debug.Log("hey hey");
 						FailCounter = 0;
 						GameObject tempObj = Instantiate(Obstacles[Random.Range(0, Obstacles.Length)], SpawnLocation, Quaternion.identity) as GameObject;
 						tempObj.tag = "Obstacle"; // added this as before the ground was being tagged a obsticle insted of the .. obsticles

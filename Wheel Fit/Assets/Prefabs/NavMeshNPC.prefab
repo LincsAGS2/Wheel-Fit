@@ -13,9 +13,10 @@ GameObject:
   - 23: {fileID: 2377650}
   - 114: {fileID: 11477650}
   - 195: {fileID: 19564156}
+  - 114: {fileID: 11433098}
   m_Layer: 0
   m_Name: NavMeshNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -59,6 +60,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177650}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &11433098
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dcd1b2697b553547b852c248e76b5df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DestructionDistance: 1
+  UpdateTime: .5
 --- !u!114 &11477650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -73,6 +87,7 @@ MonoBehaviour:
   TargetLocation: {x: 0, y: 0, z: 0}
   PlayerPosition: {fileID: 0}
   StartLocation: {x: 0, y: 0, z: 0}
+  NPCMaxSpeed: 0
 --- !u!136 &13677650
 CapsuleCollider:
   m_ObjectHideFlags: 1
