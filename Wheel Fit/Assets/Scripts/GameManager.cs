@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
 		return PlayerScore;
 	}
 	
-	public void SetPlayerScore(int score)
+	public void SetPlayerScore(int score = 0)
 	{
 		PlayerScore += 10 + score;
 	}
