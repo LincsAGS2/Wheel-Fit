@@ -219,6 +219,49 @@ ModelImporter:
     4300080: Icosphere_003
     4300082: Icosphere_004
     4300084: Icosphere_005
+    6400000: Counter
+    6400002: CounterDoor
+    6400004: Cube
+    6400006: Cube_001
+    6400008: Cube_002
+    6400010: Cube_003
+    6400012: Cube_004
+    6400014: Cube_005
+    6400016: Cube_006
+    6400018: Cube_007
+    6400020: Cube_017
+    6400022: Cylinder_000
+    6400024: Cylinder_001
+    6400026: Cylinder_002
+    6400028: Cylinder_004
+    6400030: Cylinder_007
+    6400032: Cylinder_010
+    6400034: FrontDoorLeft
+    6400036: FrontDoorRight
+    6400038: FrontWall
+    6400040: FrontWall_001
+    6400042: GoRafting
+    6400044: GoRaftingEndless
+    6400046: GoRaftingEndlessDoor
+    6400048: GoSkiing
+    6400050: GoSkiingDoor
+    6400052: GoSkiingEndless
+    6400054: GoSkiingEndlessDoor
+    6400056: Icosphere
+    6400058: Icosphere_001
+    6400060: Icosphere_002
+    6400062: Icosphere_003
+    6400064: Icosphere_004
+    6400066: Icosphere_005
+    6400068: LeftWall
+    6400070: LeftWall_001
+    6400072: LeftWall_002
+    6400074: Plane
+    6400076: RightWall
+    6400078: RightWall_001
+    6400080: RightWall_002
+    6400082: Roof
+    6400084: SupplyShop
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -242,7 +285,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

@@ -54,9 +54,9 @@ public class GameManager : MonoBehaviour {
 		return PlayerScore;
 	}
 	
-	public void SetPlayerScore()
+	public void SetPlayerScore(int score)
 	{
-		PlayerScore += 10;
+		PlayerScore += 10 + score;
 	}
 
 	public float GetObstaclesHit()

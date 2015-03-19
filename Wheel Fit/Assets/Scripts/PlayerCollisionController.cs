@@ -65,5 +65,17 @@ public class PlayerCollisionController : MonoBehaviour {
 				gm.AdjustMoveSpeed (-1.0f);
 			}
 		}
+
+		if(c.collider.tag == "PowerUP")
+		{
+			if(c.collider.name == "Points")
+			{
+				gm.SetPlayerScore(100);
+			}
+			if(c.collider.name == "Speed")
+			{
+				gm.AdjustMoveSpeed(5);
+			}
+		}
 	}
 }
