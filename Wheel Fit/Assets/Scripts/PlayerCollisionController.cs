@@ -56,7 +56,14 @@ public class PlayerCollisionController : MonoBehaviour {
 			{
 				gm.AdjustMoveSpeed (-0.5f);
 			}
-			
+		}
+
+		if(c.collider.tag == "NPC")
+		{
+			if(gm.moveSpeed > 1.0f)
+			{
+				gm.AdjustMoveSpeed (-1.0f);
+			}
 		}
 	}
 }
