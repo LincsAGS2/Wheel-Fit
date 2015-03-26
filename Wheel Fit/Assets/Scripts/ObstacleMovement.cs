@@ -2,20 +2,25 @@
 using System.Collections;
 
 public class ObstacleMovement : MonoBehaviour {
-		
+
+	public GameManager gm;
 	public GameObject[] Obstacles;
 	public GameObject[] Npcs;
 	public GameObject[] PowerUps;
 
-	public float ObstacleSpeed = 0.1f;
-	public float NPCSpeed = 0.1f;
-	public float PowerUPSpeed = 0.1f;
+	public float ObstacleSpeed;
+	public float NPCSpeed;
+	public float PowerUPSpeed;
 		
 	void Update()
 	{
 		Obstacles = GameObject.FindGameObjectsWithTag("Obstacle");
 		Npcs = GameObject.FindGameObjectsWithTag("NPC");
 		PowerUps = GameObject.FindGameObjectsWithTag("PowerUP");
+
+		ObstacleSpeed = gm.GetMoveSpeed()/10;
+		NPCSpeed = gm.GetMoveSpeed()/10;
+		PowerUPSpeed = gm.GetMoveSpeed()/10;
 
 		Debug.Log("Obstacles : " + Obstacles.Length + " Npcs : " + Npcs.Length + " PowerUps : " + PowerUps.Length);
 		ObstacleUpdate ();

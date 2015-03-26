@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
@@ -41,7 +41,7 @@ public class LevelSpawner : MonoBehaviour {
 		moveSpeed = gm.GetMoveSpeed ();
 		chunkMoveVector = new Vector3 (0, 0, -moveSpeed / 100);
 		chunkResetVector = new Vector3 (-5, 0, 59);
-		levelLength = gm.courseLength;
+		levelLength = gm.TimeLimit;
 	}
 
 

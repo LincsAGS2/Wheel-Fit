@@ -49,7 +49,7 @@ public class GUIScript : MonoBehaviour {
 		//update text
 		ScoreText.GetComponent<Text>().text = "Score : " + myScore;
 		TimeText.GetComponent<Text>().text = "Time : " + gameTime;
-		DistanceText.GetComponent<Text>().text = "Distance : " + myDistance + " Mile";
+		DistanceText.GetComponent<Text>().text = "Distance : " + myDistance + " Metre";
 		SpeedText.GetComponent<Text>().text = "Current Speed/sec : " + mySpeed;
 		ObstaclesText.GetComponent<Text>().text = "Obstacles Hit : " + MyObstaclesHit;
 

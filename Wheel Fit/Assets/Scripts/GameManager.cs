@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour {
 	float PlayerScore;
 	//List<int> scores;
 	public int playerFinalScore;
-	public int courseLength;
+	public int TimeLimit;
 	
 	public float moveSpeed;
 	public int ObstaclesHit;
