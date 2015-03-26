@@ -47,6 +47,7 @@ public class PlayerCollisionController : MonoBehaviour {
 		if(c.collider.tag == "Obstacle")
 		{
 			gm.SetObstaclesHit(1);
+			Destroy(c.gameObject);
 			//stops the players speed going under 0.5f
 			Debug.Log(gm.moveSpeed);
 			Debug.Log (CurrentColour.a);
@@ -71,10 +72,12 @@ public class PlayerCollisionController : MonoBehaviour {
 			if(c.collider.name == "Points(Clone)")
 			{
 				gm.AddPlayerScore(100);
+				Destroy(c.gameObject);
 			}
 			if(c.collider.name == "Speed(Clone)")
 			{
 				gm.AdjustMoveSpeed(5);
+				Destroy(c.gameObject);
 			}
 		}
 	}

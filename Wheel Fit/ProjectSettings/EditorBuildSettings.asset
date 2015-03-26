@@ -4,23 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/splashScene.unity
-<<<<<<< HEAD
-  - enabled: 0
-    path: Assets/Scenes/Menu.unity
-  - enabled: 0
-    path: Assets/Scenes/Main.unity
-  - enabled: 0
-    path: Assets/Scenes/WaterGame.unity
-  - enabled: 1
-    path: Assets/Scenes/SkiingGame.unity
-=======
-  - enabled: 1
-    path: Assets/Scenes/game_start.unity
-  - enabled: 1
-    path: Assets/Scenes/Main.unity
-  - enabled: 0
-    path: Assets/Scenes/Menu.unity
->>>>>>> origin/game_start
+  m_Scenes: []
