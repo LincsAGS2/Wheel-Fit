@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 38d81b2a4b6a7b944aa2c58bd9c75248
+=======
+guid: 72d59a0612ad63f4585cc6d0dd2a6ac8
+>>>>>>> origin/game_start
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -10,7 +14,10 @@ ModelImporter:
     2300000: default
     3300000: default
     4300000: default
+<<<<<<< HEAD
     6400000: default
+=======
+>>>>>>> origin/game_start
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -33,7 +40,11 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
+<<<<<<< HEAD
     addColliders: 1
+=======
+    addColliders: 0
+>>>>>>> origin/game_start
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

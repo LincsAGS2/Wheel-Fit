@@ -6,7 +6,12 @@ TagManager:
   - Obstacle
   - NPC
   - Ground
+<<<<<<< HEAD
   - PowerUP
+=======
+  - item
+  - LevelStart
+>>>>>>> origin/game_start
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
