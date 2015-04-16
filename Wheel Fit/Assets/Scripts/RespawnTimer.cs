@@ -34,17 +34,36 @@ public class RespawnTimer : MonoBehaviour {
 	}
 	void Update()
 	{
+		MovementSpeed = gm.GetMoveSpeed()/5;
+	}
 	void SpawnNPCInvoker()
 	{
+		SpawnNPC();
+		Invoke("SpawnNPCInvoker",NPCSpawnRate - MovementSpeed);
+		PowerUPSpawnRate= 5;
 	}
-	
 	void SpawnNPC()
 	{
 		NPCSpawnerLocation.GetComponent<NPCSpawner>().SpawnNPCs();
 	}
+
+	void SpawnPowerUpsInvoker()
+	{
+		float temp = (MovementSpeed /PowerUPSpawnRate ) *10;
+		SpawnPowerUps();
+		Invoke("SpawnPowerUpsInvoker",PowerUPSpawnRate);
+
+	}
 	void SpawnPowerUps()
 	{
 		PowerUPSpawnerLocation.GetComponent<PowerUpSpawner> ().SpawnPowerUps ();
+	}
+
+	void SpawnObstaclesInvoker()
+	{
+		float temp = (MovementSpeed /PowerUPSpawnRate ) *10;
+		SpawnObstacles();
+		Invoke("SpawnObstaclesInvoker",PowerUPSpawnRate);
 	}
 	void SpawnObstacles()
 	{
