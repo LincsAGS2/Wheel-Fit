@@ -1,0 +1,142 @@
+fileFormatVersion: 2
+guid: b401572f2ef217f48b53797dda1bcf1d
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: cone57_copy58_default
+    100002: cone57_default
+    100004: cylinder40_copy38_coat
+    100006: cylinder41_copy39_coat
+    100008: cylinder41_copy42_coat
+    100010: cylinder47_copy41_coat
+    100012: cylinder47_copy44_coat
+    100014: cylinder56_default
+    100016: cylinder57_copy50_coat
+    100018: cylinder59_default
+    100020: cylinder61_copy62_default
+    100022: cylinder61_default
+    100024: //RootNode
+    100026: sphere37_copy40_shoes
+    100028: sphere37_copy43_shoes
+    100030: sphere58_copy51_skin
+    100032: sphere58_copy52_rubber
+    400000: cone57_copy58_default
+    400002: cone57_default
+    400004: cylinder40_copy38_coat
+    400006: cylinder41_copy39_coat
+    400008: cylinder41_copy42_coat
+    400010: cylinder47_copy41_coat
+    400012: cylinder47_copy44_coat
+    400014: cylinder56_default
+    400016: cylinder57_copy50_coat
+    400018: cylinder59_default
+    400020: cylinder61_copy62_default
+    400022: cylinder61_default
+    400024: //RootNode
+    400026: sphere37_copy40_shoes
+    400028: sphere37_copy43_shoes
+    400030: sphere58_copy51_skin
+    400032: sphere58_copy52_rubber
+    2300000: cone57_copy58_default
+    2300002: cone57_default
+    2300004: cylinder40_copy38_coat
+    2300006: cylinder41_copy39_coat
+    2300008: cylinder41_copy42_coat
+    2300010: cylinder47_copy41_coat
+    2300012: cylinder47_copy44_coat
+    2300014: cylinder56_default
+    2300016: cylinder57_copy50_coat
+    2300018: cylinder59_default
+    2300020: cylinder61_copy62_default
+    2300022: cylinder61_default
+    2300024: sphere37_copy40_shoes
+    2300026: sphere37_copy43_shoes
+    2300028: sphere58_copy51_skin
+    2300030: sphere58_copy52_rubber
+    3300000: cone57_copy58_default
+    3300002: cone57_default
+    3300004: cylinder40_copy38_coat
+    3300006: cylinder41_copy39_coat
+    3300008: cylinder41_copy42_coat
+    3300010: cylinder47_copy41_coat
+    3300012: cylinder47_copy44_coat
+    3300014: cylinder56_default
+    3300016: cylinder57_copy50_coat
+    3300018: cylinder59_default
+    3300020: cylinder61_copy62_default
+    3300022: cylinder61_default
+    3300024: sphere37_copy40_shoes
+    3300026: sphere37_copy43_shoes
+    3300028: sphere58_copy51_skin
+    3300030: sphere58_copy52_rubber
+    4300000: cone57_copy58_default
+    4300002: cone57_default
+    4300004: cylinder40_copy38_coat
+    4300006: cylinder41_copy39_coat
+    4300008: cylinder41_copy42_coat
+    4300010: cylinder47_copy41_coat
+    4300012: cylinder47_copy44_coat
+    4300014: cylinder56_default
+    4300016: cylinder57_copy50_coat
+    4300018: cylinder59_default
+    4300020: cylinder61_copy62_default
+    4300022: cylinder61_default
+    4300024: sphere37_copy40_shoes
+    4300026: sphere37_copy43_shoes
+    4300028: sphere58_copy51_skin
+    4300030: sphere58_copy52_rubber
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
