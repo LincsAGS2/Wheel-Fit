@@ -36,10 +36,19 @@ public class GUIScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//Update Time
-		curTime = System.DateTime.Now;
-		timeSinceStart = curTime - startTime;
-		gameTime = timeSinceStart.Minutes + " : " + timeSinceStart.Seconds;
+		if(GameManager.TimedGame != true)
+		{
+			//Update Time
+			curTime = System.DateTime.Now;
+			timeSinceStart = curTime - startTime;
+			gameTime = timeSinceStart.Minutes + " : " + timeSinceStart.Seconds;
+
+			TimeText.GetComponent<Text>().text = "Time : " + gameTime;
+		}
+		else
+		{
+			TimeText.GetComponent<Text>().text = "Time Reamining : " + gm.GetTimeLeft().ToString("0");
+		}
 
 		//Game Manager stuff...
 		mySpeed = gm.GetMoveSpeed();
@@ -48,7 +57,6 @@ public class GUIScript : MonoBehaviour {
 
 		//update text
 		ScoreText.GetComponent<Text>().text = "Score : " + myScore;
-		TimeText.GetComponent<Text>().text = "Time : " + gameTime;
 		DistanceText.GetComponent<Text>().text = "Distance : " + myDistance + " Metre";
 		SpeedText.GetComponent<Text>().text = "Current Speed/sec : " + mySpeed;
 		ObstaclesText.GetComponent<Text>().text = "Obstacles Hit : " + MyObstaclesHit;

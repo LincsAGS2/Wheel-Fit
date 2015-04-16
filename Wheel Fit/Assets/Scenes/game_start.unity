@@ -439,6 +439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &162411200
 Animator:
   serializedVersion: 3
@@ -615,6 +616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!64 &206624866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1565,6 +1567,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &492280643
 Animator:
   serializedVersion: 3
@@ -1847,6 +1850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 120
 --- !u!64 &517864426
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2097,6 +2101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &651898711
 Animator:
   serializedVersion: 3
@@ -3273,6 +3278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &919848044
 Animator:
   serializedVersion: 3
@@ -4852,6 +4858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &1689944879
 Animator:
   serializedVersion: 3
@@ -5349,6 +5356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &1783950616
 Animator:
   serializedVersion: 3
@@ -6166,6 +6174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameLength: 0
 --- !u!95 &2010556888
 Animator:
   serializedVersion: 3
