@@ -4,11 +4,6 @@ using System.Collections;
 public class PickUp : MonoBehaviour 
 {
 	public float GameLength;
-	void FixedUpdate () 
-	{
-	
-	}
-
 	void OnTriggerEnter(Collider other)
 	{
 		if(other.gameObject.tag == "item")

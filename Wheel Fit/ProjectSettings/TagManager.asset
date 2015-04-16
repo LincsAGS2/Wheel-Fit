@@ -3,14 +3,6 @@
 --- !u!78 &1
 TagManager:
   tags:
-<<<<<<< HEAD
-=======
-  - 
-  - Obstacle
-  - NPC
-  - PowerUP
-  - Ground
->>>>>>> origin/Thomas_Sprint_3_Week_1_Rafting_And_Skii_Models_Added
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

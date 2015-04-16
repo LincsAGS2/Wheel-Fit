@@ -4,10 +4,6 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/game_start.unity
@@ -15,6 +11,5 @@ EditorBuildSettings:
     path: Assets/Scenes/SkiingGame.unity
   - enabled: 1
     path: Assets/Scenes/WaterGame.unity
->>>>>>> origin/Thomas_Sprint_3_Week_3_Game_Time_Limit
-=======
->>>>>>> origin/Thomas_Sprint_3_Week_1_Rafting_And_Skii_Models_Added
+  - enabled: 1
+    path: Assets/Scenes/ScoreScreen.unity

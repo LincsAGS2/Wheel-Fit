@@ -392,7 +392,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 162411197}
   - 95: {fileID: 162411200}
-  - 114: {fileID: 162411199}
   - 64: {fileID: 162411198}
   m_Layer: 0
   m_Name: skiis
@@ -428,18 +427,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 0}
---- !u!114 &162411199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 162411196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &162411200
 Animator:
   serializedVersion: 3
@@ -583,7 +570,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 206624864}
   - 95: {fileID: 206624867}
-  - 114: {fileID: 206624865}
   - 64: {fileID: 206624866}
   m_Layer: 0
   m_Name: SkiBoot
@@ -605,18 +591,6 @@ Transform:
   - {fileID: 936578385}
   m_Father: {fileID: 0}
   m_RootOrder: 4
---- !u!114 &206624865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 206624863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!64 &206624866
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1547,7 +1521,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 492280644}
   - 95: {fileID: 492280643}
-  - 114: {fileID: 492280642}
   - 64: {fileID: 492280645}
   m_Layer: 0
   m_Name: SkiBoot
@@ -1556,18 +1529,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &492280642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492280641}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &492280643
 Animator:
   serializedVersion: 3
@@ -2051,8 +2012,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 651898708}
   - 95: {fileID: 651898711}
-  - 114: {fileID: 651898710}
   - 64: {fileID: 651898709}
+  - 114: {fileID: 651898710}
   m_Layer: 0
   m_Name: 'goggles new '
   m_TagString: item
@@ -2098,10 +2059,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 651898707}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b2ff54b0d707d34597cdaa77838cc90, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &651898711
 Animator:
   serializedVersion: 3
@@ -3245,7 +3205,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 919848042}
   - 95: {fileID: 919848044}
-  - 114: {fileID: 919848043}
   - 64: {fileID: 919848045}
   m_Layer: 0
   m_Name: SkiPoles
@@ -3267,18 +3226,6 @@ Transform:
   - {fileID: 658747175}
   m_Father: {fileID: 0}
   m_RootOrder: 12
---- !u!114 &919848043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 919848041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &919848044
 Animator:
   serializedVersion: 3
@@ -4824,8 +4771,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1689944880}
   - 95: {fileID: 1689944879}
-  - 114: {fileID: 1689944878}
-  - 64: {fileID: 1689944881}
   - 64: {fileID: 1689944877}
   m_Layer: 0
   m_Name: SkiPoles
@@ -4847,18 +4792,6 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 0}
---- !u!114 &1689944878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1689944876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &1689944879
 Animator:
   serializedVersion: 3
@@ -4888,19 +4821,6 @@ Transform:
   - {fileID: 1830662060}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!64 &1689944881
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1689944876}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 0}
 --- !u!1 &1715032231
 GameObject:
   m_ObjectHideFlags: 0
@@ -5319,7 +5239,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 1783950614}
   - 95: {fileID: 1783950616}
-  - 114: {fileID: 1783950615}
   - 64: {fileID: 1783950617}
   m_Layer: 0
   m_Name: 'goggles new '
@@ -5345,18 +5264,6 @@ Transform:
   - {fileID: 205955542}
   m_Father: {fileID: 0}
   m_RootOrder: 9
---- !u!114 &1783950615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1783950613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &1783950616
 Animator:
   serializedVersion: 3
@@ -6140,7 +6047,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 2010556886}
   - 95: {fileID: 2010556888}
-  - 114: {fileID: 2010556887}
   - 64: {fileID: 2010556889}
   m_Layer: 0
   m_Name: skiis
@@ -6163,18 +6069,6 @@ Transform:
   - {fileID: 1091673089}
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!114 &2010556887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2010556885}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7b6e6f981662144d9080037d9ebdf7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameLength: 0
 --- !u!95 &2010556888
 Animator:
   serializedVersion: 3
