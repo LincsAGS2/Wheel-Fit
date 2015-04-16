@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	/// Start this instance.
 	/// </summary>
 	void Start () {
+
 		/*  scores = new List<int>();
 		for(int i = 1; i<11; i++)
 		{
