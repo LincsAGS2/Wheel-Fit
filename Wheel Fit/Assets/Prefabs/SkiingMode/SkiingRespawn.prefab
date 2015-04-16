@@ -153,7 +153,7 @@ MonoBehaviour:
   SpawnYAxis: 0
   MinimumDistance: 2
   FailCounter: 2
-  NPC: {fileID: 177650, guid: 3bc615b8d91b1ff489ecec694f10cbd9, type: 2}
+  NPC: {fileID: 150938, guid: 63e332997bb3ec14f9e7e2b393ac8818, type: 2}
   NPCSpeed: 5
   DisplaySpawnRange: 1
 --- !u!114 &11479094

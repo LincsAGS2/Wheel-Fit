@@ -198,6 +198,7 @@ MonoBehaviour:
   mySpeed: 0
   myScore: 0
   myDistance: 0
+  MyObstaclesHit: 0
   ScoreText: {fileID: 136174}
   TimeText: {fileID: 136172}
   DistanceText: {fileID: 136178}
