@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PickUp : MonoBehaviour 
 {
-	
+	public float GameLength;
 	void FixedUpdate () 
 	{
 	
@@ -21,6 +21,8 @@ public class PickUp : MonoBehaviour
 				switch(other.collider.name)
 			{
 			case "GoSkiingDoor" :
+				GameManager.GameTimeBegin = GameLength;
+				GameManager.TimedGame = true;
 				Application.LoadLevel("SkiingGame");
 				break;
 				
@@ -29,6 +31,8 @@ public class PickUp : MonoBehaviour
 				break;
 				
 			case "GoRaftingDoor" :
+				GameManager.GameTimeBegin = GameLength;
+				GameManager.TimedGame = true;
 				Application.LoadLevel("WaterGame");
 				break;
 				

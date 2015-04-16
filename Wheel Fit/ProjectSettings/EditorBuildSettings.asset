@@ -5,3 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes: []
+<<<<<<< HEAD
+=======
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/game_start.unity
+  - enabled: 1
+    path: Assets/Scenes/SkiingGame.unity
+  - enabled: 1
+    path: Assets/Scenes/WaterGame.unity
+>>>>>>> origin/Thomas_Sprint_3_Week_3_Game_Time_Limit
