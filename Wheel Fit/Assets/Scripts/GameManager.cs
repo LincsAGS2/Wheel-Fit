@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour {
 	
 	public float moveSpeed;
 	public int ObstaclesHit;
+
+	public static bool TimedGame;
+	public static float GameTimeBegin;
+	public float StartTime;
+	public float GameTimeLeft;
 	// Use this for initialization
 	/// <summary>
 	/// Start this instance.
@@ -31,18 +36,32 @@ public class GameManager : MonoBehaviour {
 			PlayerScore = PlayerPrefs.GetInt(prefString);
 
 		}*/
+		if (TimedGame == true)
+		{
+			StartTime = Time.time;
+		}
+
 		InvokeRepeating ("SetPlayerScore", 0, 1);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (TimedGame == true)
+		{
+			GameTimeLeft = GameTimeBegin - (Time.time - StartTime);
+			if(GameTimeLeft <= 0)
+			{
+				Application.LoadLevel("game_start"); // change to leaderboard scene once created
+
+			}
+		}
 	}
-	
-	/// <summary>
-	/// Gets the move speed.
-	/// </summary>
-	/// <returns>The move speed.</returns>
+
+	public float GetTimeLeft()
+	{
+		return GameTimeLeft;
+	}
+
 	public float GetMoveSpeed()
 	{
 		return moveSpeed;
