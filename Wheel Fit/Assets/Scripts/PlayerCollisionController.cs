@@ -5,7 +5,8 @@ using UnityEngine.UI;
 public class PlayerCollisionController : MonoBehaviour {
 	public GameManager gm;
 	public GameObject CollisionEffect;
-
+    public AudioClip impact;
+    public AudioSource audio;
 	public float SplashDuration = 1;
 	public bool DisplayEffect = false;
 
@@ -16,7 +17,7 @@ public class PlayerCollisionController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		gm = FindObjectOfType<GameManager> ().GetComponent<GameManager> ();
-
+        audio = GetComponent<AudioSource>();
 		CollisionEffect = GameObject.Find("SplashEffect Image");
 		StartColour = CollisionEffect.GetComponent<Image>().color;
 		CollisionEffect.SetActive(false); // hides the splash image untill needed
@@ -51,6 +52,8 @@ public class PlayerCollisionController : MonoBehaviour {
 			Debug.Log(gm.moveSpeed);
 			Debug.Log (CurrentColour.a);
 			DisplayEffect = true;
+
+            AudioSource.PlayClipAtPoint(impact, transform.position);
 
 			if(gm.moveSpeed > 1.0f)
 			{
