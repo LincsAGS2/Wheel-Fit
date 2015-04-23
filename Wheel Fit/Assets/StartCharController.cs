@@ -29,7 +29,8 @@ public class StartCharController : MonoBehaviour {
 		if(kinectSensors.Count == 0)
 		{
 			this.sensor = null;
-			throw new UnityException("Could not find a Kinect sensor.");
+			//throw new UnityException("Could not find a Kinect sensor.");
+			Debug.Log("Could not find a Kinect sensor");
 		}
 		else // added this
 		{
