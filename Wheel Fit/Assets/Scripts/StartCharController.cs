@@ -114,12 +114,12 @@ public class StartCharController : MonoBehaviour {
 		
 		if(seatedInfo.Features.Position.y < 1.1f)
 		{
-			transform.Translate(Vector3.forward * 5.0f * Time.deltaTime);
+			transform.Translate(Vector3.forward * 2.5f * Time.deltaTime);
 			
 		}
 		else if(seatedInfo.Features.Position.y > 1.3f)
 		{
-			transform.Translate(Vector3.back * 5.0f * Time.deltaTime);
+			transform.Translate(Vector3.back * 2.5f * Time.deltaTime);
 		}
 	}
 	void KeyboardControls()
@@ -135,12 +135,12 @@ public class StartCharController : MonoBehaviour {
 		}
 		if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
 		{
-			transform.Translate(Vector3.forward * 5.0f * Time.deltaTime);
+			transform.Translate(Vector3.forward * 2.5f * Time.deltaTime);
 		}
 		
 		else if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
 		{
-			transform.Translate(Vector3.back * 5.0f * Time.deltaTime);
+			transform.Translate(Vector3.back * 2.5f * Time.deltaTime);
 			
 		}
 	}

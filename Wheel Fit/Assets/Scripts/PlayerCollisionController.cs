@@ -86,5 +86,14 @@ public class PlayerCollisionController : MonoBehaviour {
 			}
             Destroy(c.gameObject);
 		}
+        if (c.collider.tag == "NavMeshSlalom")
+        {
+            Destroy(c.gameObject);
+        }
+        if (c.collider.tag == "NavMeshSnowDrift")
+        {
+            Destroy(c.gameObject);
+        }
+
 	}
 }
