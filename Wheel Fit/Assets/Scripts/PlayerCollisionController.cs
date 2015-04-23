@@ -59,6 +59,7 @@ public class PlayerCollisionController : MonoBehaviour {
 			{
 				gm.AdjustMoveSpeed (-0.5f);
 			}
+            Destroy(c.gameObject);
 		}
 
 		if(c.collider.tag == "NPC")
@@ -67,6 +68,7 @@ public class PlayerCollisionController : MonoBehaviour {
 			{
 				gm.AdjustMoveSpeed (-1.0f);
 			}
+            Destroy(c.gameObject);
 		}
 
 		if(c.collider.tag == "PowerUP")
@@ -77,8 +79,12 @@ public class PlayerCollisionController : MonoBehaviour {
 			}
 			if(c.collider.name == "Speed(Clone)")
 			{
-				gm.AdjustMoveSpeed(5);
+                if (gm.moveSpeed < 25.0f)
+                {
+                    gm.AdjustMoveSpeed(1.5f);
+                }
 			}
+            Destroy(c.gameObject);
 		}
 	}
 }

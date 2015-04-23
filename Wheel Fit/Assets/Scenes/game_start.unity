@@ -1923,6 +1923,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: 11464892, guid: a164c238cf3dfd547b84bb885f2c8ae1, type: 2}
+      propertyPath: GameLength
+      value: 120
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a164c238cf3dfd547b84bb885f2c8ae1, type: 2}
   m_RootGameObject: {fileID: 1885980421}
@@ -5379,7 +5383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 785a9d26e2653cf41b65328f40f044fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameLength: 0
+  GameLength: 120
 --- !u!64 &1885980423
 MeshCollider:
   m_ObjectHideFlags: 0

@@ -61,7 +61,6 @@ public class GUIScript : MonoBehaviour {
 		SpeedText.GetComponent<Text>().text = "Current Speed/sec : " + mySpeed;
 		ObstaclesText.GetComponent<Text>().text = "Obstacles Hit : " + MyObstaclesHit;
 
-
 	}
 
 	void UpdateMydistance()

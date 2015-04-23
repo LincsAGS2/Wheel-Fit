@@ -9,9 +9,9 @@ public class ScoreScreenGUI : MonoBehaviour {
 	public Text myCountDownText;
 
 	[Header("Static Variables")]
-	static float DistanceTravled; // these will need setting at end of game ( from timed mode )
-	static float PlayersScore; // these will need setting at end of game ( from timed mode )
-	static float TimePlayed; // these will need setting at end of game ( from timed mode )
+	public static float DistanceTravled; // these will need setting at end of game ( from timed mode )
+    public static float PlayersScore; // these will need setting at end of game ( from timed mode )
+    public static float TimePlayed; // these will need setting at end of game ( from timed mode )
 
 	[Header("Time Variables")]
 	public float StartTime;
@@ -30,7 +30,7 @@ public class ScoreScreenGUI : MonoBehaviour {
 		{
 			Application.LoadLevel("game_start");
 		}
-		myStatsText.text = "You Traveled " + DistanceTravled + "Distance and scored" + PlayersScore + "points in" + TimePlayed + "Time";
+		myStatsText.text = "You Traveled " + DistanceTravled + " Distance and scored " + PlayersScore + " points in " + TimePlayed + " Time";
 		myCountDownText.text = "Returning to the menu in " + ((StartTime + DisplayLength)-Time.time).ToString("0") + " seconds";
 	}
 }

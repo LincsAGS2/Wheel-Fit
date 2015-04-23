@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour {
 	public static float GameTimeBegin;
 	public float StartTime;
 	public float GameTimeLeft;
+
+    public float myMovementDistance;
 	// Use this for initialization
 	/// <summary>
 	/// Start this instance.
@@ -42,6 +44,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		InvokeRepeating ("SetPlayerScore", 0, 1);
+        InvokeRepeating("UpdateMydistance", 0, 1);
 	}
 	
 	// Update is called once per frame
@@ -51,10 +54,13 @@ public class GameManager : MonoBehaviour {
 			GameTimeLeft = GameTimeBegin - (Time.time - StartTime);
 			if(GameTimeLeft <= 0)
 			{
-				Application.LoadLevel("game_start"); // change to leaderboard scene once created
-
+				Application.LoadLevel("ScoreScreen"); // change to leaderboard scene once created
+                ScoreScreenGUI.DistanceTravled = myMovementDistance;
+                ScoreScreenGUI.PlayersScore = PlayerScore;
+                ScoreScreenGUI.TimePlayed = GameTimeBegin;
 			}
 		}
+
 	}
 
 	public float GetTimeLeft()
@@ -66,7 +72,11 @@ public class GameManager : MonoBehaviour {
 	{
 		return moveSpeed;
 	}
-	
+
+    void UpdateMydistance()
+    {
+        myMovementDistance += moveSpeed;
+    }
 	
 	public float GetPlayerScore()
 	{
